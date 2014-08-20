@@ -63,7 +63,7 @@ public class Factions extends JavaPlugin {
 				
 		// set and save the config conig.yml
 		kits.getConfig().set("cooldowns", claims);
-		saveConfig();
+		kits.saveConfig();
 		
 		String worlds = null;
 		for(World world : getServer().getWorlds()) {
