@@ -64,9 +64,10 @@ public class KitsSystem implements CommandExecutor {
 				    
 				    if(!t) {
 				    	int count;
-					    count = claimed.get(key) -1;
+					    count = value -1;
 					    claimed.put(key, count);
 				    }
+				    
 				    t = false;
 				}
 			}
@@ -86,7 +87,7 @@ public class KitsSystem implements CommandExecutor {
 		List<ItemStack> s = items;
 		
 		getConfig().set("kits." + name, s);
-		getInstance().saveConfig();
+		config.saveConfig();
 	}
 	
 	public ItemStack[] loadKit(String name) {
